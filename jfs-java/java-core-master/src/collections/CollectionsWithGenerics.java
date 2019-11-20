@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class CollectionsWithGenerics {
 public static void main(String[] args) {
 	List list = new ArrayList();
-	
+	list.add
 	TestClass1 testClass1 = new TestClass1();
 	Object object = testClass1;
 }
