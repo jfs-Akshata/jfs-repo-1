@@ -1,7 +1,12 @@
-# Task
+# Task 1
 implement boolean addAll(int index,
                Collection<? extends E> c)
 
+# task 2
+add id field to Employee class
+create a list containing PermanentEmployees
+create a set containing VirtualEmployees
+create a Map which stores (id as key) , (merged list and set as values)
 # Generics
 Generics allow you to customize a "generic" method or class to whatever type you're working with.
 ## brainstorm
