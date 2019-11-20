@@ -1,4 +1,4 @@
-package collections.list;
+package collections;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -8,6 +8,7 @@ import java.util.HashSet;
 
 public class ArrayListDemo {
 	public static void main(String[] args) {
+		//Collection foodList = new ArrayList();
 		Collection foodList = new HashSet();
 		// explore on primitive and wrapper types.
 		foodList.add("Pizza");
