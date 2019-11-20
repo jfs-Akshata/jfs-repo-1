@@ -9,10 +9,15 @@ public class FileFilterDemoAnonymousJava7 {
 		File directory = new File(
 				"C:\\Users\\Subbu\\Desktop\\jfs-repo\\jfs-java\\java-core-master\\src\\java8\\lambdas");
 		// Instantiating the custom file filter using anonymous class
-		//FileFilter filter = (File pathname) ->	 pathname.getName().endsWith(".java");
-		
+		FileFilter filter = new FileFilter() {
+			@Override
+			public boolean accept(File pathname) {
+				return pathname.getName().endsWith(".java");
+			}
+
+		};
 		// Getting the files which are filtered
-		File files[] = directory.listFiles( (File pathname) ->	 pathname.getName().endsWith(".java"));
+		File files[] = directory.listFiles(filter);
 		for (File file : files) {
 			System.out.println(file.getName());
 		}

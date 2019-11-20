@@ -12,23 +12,12 @@ public class FileFilterDemoJava8 {
 		// Opening a file directory
 		File directory = new File(
 				"C:\\Users\\Subbu\\Desktop\\jfs-repo\\jfs-java\\java-core-master\\src\\java8\\lambdas");
-		// Instantiating the custom file filter
-		MyFileFilter1 filter = new MyFileFilter1();
-		// Getting the files which are filtered
-		File files[] = directory.listFiles(filter);
+		// creating a lambda expression for the file filter interface.
+		File files[] = directory.listFiles( (File pathname) ->	 pathname.getName().endsWith(".java"));
 		for (File file : files) {
 			System.out.println(file.getName());
 		}
 	}
-}
-
-
-class MyFileFilter1 implements FileFilter {
-	@Override
-	public boolean accept(File pathname) {
-		return pathname.getName().endsWith(".java");
-	}
-
 }
 
 //IS A FUNCTIONAL INTERFACE
