@@ -5,12 +5,15 @@ import java.util.List;
 import collections.model.ContractEmployee;
 import collections.model.Employee;
 import collections.model.PermanentEmployee;
+import collections.model.VirtualEmployee;
 
 import java.util.ArrayList;
 
 public class CollectionsWithGenerics {
 	public static void main(String[] args) {
-		withoutGenerics();
+		//withoutGenerics();
+		//withGenerics();
+		//usingIteratorWithGenerics();
 	}
 
 	private static void withoutGenerics() {
@@ -32,7 +35,18 @@ public class CollectionsWithGenerics {
 		list.add(100);
 		System.out.println(list);
 	}
-	private static void withGenerics() {
-		//implement it.
-	}
+    private static void withGenerics() {
+        List<Employee> list = new ArrayList<Employee>();
+        PermanentEmployee permanentEmployee = new PermanentEmployee();
+        ContractEmployee contractEmployee = new ContractEmployee();
+        VirtualEmployee virtualEmployee = new VirtualEmployee();
+        list.add(permanentEmployee);
+        list.add(contractEmployee);
+        list.add(virtualEmployee);
+        //list.add(100);
+        System.out.println(list);
+    }
+    
+    private static void usingIteratorWithGenerics() {
+    }
 }
