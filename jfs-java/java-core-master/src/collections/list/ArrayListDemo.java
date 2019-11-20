@@ -22,8 +22,9 @@ public class ArrayListDemo {
 
 //Challenge : 
 //Create a class named Employee with the following fields (EmployeeId, FirstName,LastName,Salary)
-//Add 5 employees to a collections
+//Add 5 employees to a collection.
 //Print the details of employees in the collection.
 //Apply the collection of your choice
-//Going the extra mile : apply different collections to the solve the same problem.
+//Going the extra mile : apply different collections to the solve the same problem
+//Try out different methods of the Collections API.
 
