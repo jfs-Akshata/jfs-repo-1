@@ -1,3 +1,7 @@
+# Task
+implement boolean addAll(int index,
+               Collection<? extends E> c)
+
 # Generics
 Generics allow you to customize a "generic" method or class to whatever type you're working with.
 ## brainstorm
