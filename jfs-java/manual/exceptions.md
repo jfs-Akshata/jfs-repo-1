@@ -16,3 +16,5 @@ finally - always executes
 unchecked exceptions : compiler does not force
 why? it is in the control of the programmer
 checked exception : outside the control of the programmer
+unchecked exception = RuntimeException + Error
+Throwable,Exception.
