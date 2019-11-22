@@ -1,4 +1,31 @@
+# Day 5
+Agenda
+Qucik Tour on this week's happenings.
+Roadmap : look into the coming days
+Technical : File Handling & JDBC.
+
+======================================
+Introduction.
+Workshop - coding and problem solving.
+Summary document.
+Demo : extension of the demos
+Problem and solution.
+
+Level 1 - Level 5.
+Demo : practice : document : explore
+50 % is developer : Knowledge transfer.
+
+Infrastructure
+=======================================
+9:30 : 10:00 11:00 4:00 , 5:00, (5:50 - 6:00).
+=============================================
+Problem : Thinking : coding : docs : stackoverflow.
+Whatsapp group.
+Roadmap
+
 # multithreading
+
+
 
 # multitasking , thread based and process based.
 ? heavy weight : process
