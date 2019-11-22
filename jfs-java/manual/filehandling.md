@@ -32,3 +32,6 @@ creating a diagram
 6. verify the data in the file.
 # Snippets
 new FileOutputStream(new File("output.txt")).write("Fox cheated the crow".getBytes());
+
+# programs
+# read and write bytes.
