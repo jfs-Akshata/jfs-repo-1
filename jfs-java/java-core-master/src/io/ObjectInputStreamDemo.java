@@ -20,6 +20,7 @@ import model.Employee;
 public class ObjectInputStreamDemo {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		// Open a file
+		
 		File file = new File("employee.dat");
 		// create a file input stream to read java object from the file
 		FileInputStream fileInputStream = new FileInputStream(file);
