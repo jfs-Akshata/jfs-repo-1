@@ -1,3 +1,9 @@
+# building an simple crud application using layered architecture
+> implementing a layered architecture
+1. creating the model layer
+2. create the exception layer
+3. create the service layer
+
 # what are servlets?
 1. server-side java programs
 2. run on a jvm
