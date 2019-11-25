@@ -19,12 +19,12 @@
 <configuration types : xml, annotation (xml + annotations), java (annotations)>
 <request-response cycle : roundtrip>
 
-http://localhost:8080/java-web-master/
+http://localhost:8080/java-web-master/welcome
 http: protocol
 localhost: domain or ipaddress
 8080: prot
 java-web-master : webcontext
-
+welcome : resource
 # connect with the past and future
 core : java > jvm
 web : servlet based on java > servlet container based on jvm
