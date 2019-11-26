@@ -1,4 +1,4 @@
-package com.layeredarch.webui;
+package com.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,7 +15,7 @@ import com.layeredarch.model.CreditCardModel;
 import com.layeredarch.service.CreditCardServiceImpl;
 import com.layeredarch.service.CreditCardServiceInterface;
 
-@WebServlet("/cardsui")
+@WebServlet("/cards")
 public class GetCardsServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
