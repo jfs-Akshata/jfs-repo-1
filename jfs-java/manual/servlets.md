@@ -1,3 +1,14 @@
+# init param : servlet
+# context param alternate to xml? ServletContextListener
+# Event based programming
+=========================
+# Scenario : Marriage of a friend
+# Event Source : Friend is the source
+# Event : Marriage
+# EventObject : Greeting cards
+# Event Handler : Card Recipient
+# Handler handles the event.
+
 # configuration of servlets
 * making the settings for an app
 * externalize the settings (xml file, properties)
