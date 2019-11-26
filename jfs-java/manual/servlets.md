@@ -1,3 +1,44 @@
+# configuration of servlets
+* making the settings for an app
+* externalize the settings (xml file, properties)
+* database connections, app specific settings
+* xml, anno, java config.
+* settings individual to servlets
+* settings for the entire application.
+* classroom = webcontext (.war), participant (servlet).  
+* servletconfig (configuration information for individual servlet)
+* contextconfig(configuration for the entire applicaton)
+# steps for xml
+1. configure init parameter
+<servlet>
+		<servlet-name>InitParamServletXML</servlet-name>
+		<servlet-class>com.configuration.InitParamServletXML</servlet-class>
+		<init-param>
+			<param-name>randomNumber</param-name>
+			<param-value>123</param-value>
+		</init-param>
+	</servlet>
+2. read the init parameter
+getInitParameter("randomNumber");
+getServletConfig().getInitParameter("randomNumber");
+
+3. configure the context parameter
+<context-param>
+<param-name>companyName</param-name>
+<param-value>Virtual Company</param-value>
+</context-param>
+4. read the context parameter
+getServletContext() and the read the init parameter
+# steps for annotation
+1. configre @WebServlet annotation
+## explore @WebServlet
+@WebServlet is an annotation
+@WebServlet(value = "/cards")
+@WebServlet("/cards")
+initParams = {
+    @WebInitParam(name="initParam", value="the init parameter")
+}
+
 # building an simple crud application using layered architecture
 > implementing a layered architecture
 1. creating the model layer
