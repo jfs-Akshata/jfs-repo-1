@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.jws.WebService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.layeredarch.model.CreditCardModel;
 import com.layeredarch.service.CreditCardServiceImpl;
 import com.layeredarch.service.CreditCardServiceInterface;
+
 @WebServlet("/cards")
 public class GetCardsServlet extends HttpServlet {
 	@Override
