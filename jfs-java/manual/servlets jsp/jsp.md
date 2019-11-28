@@ -24,3 +24,11 @@ class JSPDemo
         System.out.println(message);
     }
 }
+
+String str = "a";
+str = str+ "b";
+"a" "ab" "abc" "abcd"
+StringBuilder
+
+Lab : Create a github account with jfs-firstname
+Check in your projects.

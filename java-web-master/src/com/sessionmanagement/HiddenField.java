@@ -1,6 +1,7 @@
 package com.sessionmanagement;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.RequestDispatcher;
@@ -18,12 +19,16 @@ public class HiddenField extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		// 1. Read all the parameters from the request
-		String userString = req.getParameter("name");
-		String passswordString = req.getParameter("password");
-		String captchaString = req.getParameter("captcha");
+		String userString = req.getParameter("name"); // ""
+		String passswordString = req.getParameter("password");// ""
+		String captchaString = req.getParameter("cap"); // null
 		// 2. perform validation
-		if (userString.contentEquals("admin") && passswordString.equals("adminpass")
-				&& captchaString.equals("#123")) {
+		// if userString != null && passwordString != null, captchaString not
+		// checked.
+//		if (userString.contentEquals("admin") && passswordString.equals("adminpass")
+//				&& captchaString.equals("#123")) {
+	if (userString.contentEquals("admin") && passswordString.equals("adminpass")
+	&& Optional.of(captchaString).equals("#123")) {
 			resp.getWriter().println("Login successful!");
 		} else {
 			resp.getWriter().println("Login error!");
