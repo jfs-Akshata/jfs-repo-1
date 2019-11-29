@@ -288,3 +288,42 @@ EXCEPTION
 WHEN TOO_MANY_ROWS THEN
 DBMS_OUTPUT.PUT_LINE (' Your select statement retrieved multiple rows. Consider using a cursor.');
 END;
+
+
+--NAMED PL/SQL BLOCKS
+create procedure myproc as
+dept_id dept.department_id%TYPE;
+dept_name dept.department_name%TYPE;
+begin
+dept_id:=280;
+dept_name:='ST-Curriculum';
+INSERT INTO dept(department_id,department_name)
+VALUES(dept_id,dept_name);
+DBMS_OUTPUT.PUT_LINE(' Inserted '||
+SQL%ROWCOUNT ||' row ');
+end;
+
+begin
+myproc;
+end;
+
+-------FUNCTIONS--------------
+CREATE or replace function myfunc 
+return number
+is
+begin
+return 100;
+end;
+
+
+select myfunc() from dual;
+
+CREATE or replace function adder (value1 number, value2 number)
+return number
+is
+begin
+return value1 + value2;
+end;
+
+select adder(5,6) from dual;
+select department_id, adder(department_id, 100) from departments;
