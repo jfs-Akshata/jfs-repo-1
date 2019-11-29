@@ -32,4 +32,4 @@ public class InitParamContextParamXML extends HttpServlet {
 }
 
 //labs
-// add additional context parameters.
+//add additional context parameters.
