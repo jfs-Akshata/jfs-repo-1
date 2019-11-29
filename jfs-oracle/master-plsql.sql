@@ -207,5 +207,84 @@ DBMS_OUTPUT.PUT_LINE(emp_record.job_id);
 DBMS_OUTPUT.PUT_LINE(emp_record.salary);
 DBMS_OUTPUT.PUT_LINE(emp_record.last_name);
 END;
+ 
+----------------EXPLICIT CURSORS-----------------    
 
-----------------EXPLICIT CURSORS-----------------       
+declare
+--declare a cursor
+cursor employeeCursor is
+select first_name, last_name from employees;
+firstname employees.first_name%TYPE;
+lastname employees.last_name%TYPE;
+begin
+-- open the cursor
+open employeeCursor;
+--fetch 
+loop
+fetch employeeCursor into firstname, lastname;
+DBMS_OUTPUT.PUT_LINE( firstname ||' '||lastname);
+exit when employeeCursor%NOTFOUND;
+end loop;
+--close
+close employeeCursor;
+end;
+
+
+--use cursor for loops
+
+declare
+--declare a cursor
+cursor employeeCursor is
+select first_name, last_name, employee_id from employees;
+begin
+for emp_record in employeeCursor
+loop 
+DBMS_OUTPUT.PUT_LINE( emp_record.first_name ||' '||emp_record.last_name ||' '|| emp_record.employee_id);
+exit when employeeCursor%NOTFOUND;
+end loop;
+end;
+
+--Cursors with Parameters
+declare
+--declare a cursor
+cursor employeeCursor(job_id char(20)) is
+select first_name, last_name from employees where job_id = job_id;
+firstname employees.first_name%TYPE;
+lastname employees.last_name%TYPE;
+begin
+-- open the cursor
+open employeeCursor('AD_VP');
+--fetch 
+loop
+fetch employeeCursor into firstname, lastname;
+DBMS_OUTPUT.PUT_LINE( firstname ||' '||lastname);
+exit when employeeCursor%NOTFOUND;
+end loop;
+--close
+close employeeCursor;
+end;
+
+--CURSOR WITH PARAMETERS--------
+declare
+--declare a cursor
+cursor employeeCursor(job_id char) is
+select first_name, last_name, EMPLOYEE_ID from employees where job_id = job_id;
+begin
+for emp_record in employeeCursor('AD_VP')
+loop 
+DBMS_OUTPUT.PUT_LINE( emp_record.first_name ||' '||emp_record.last_name ||' '|| emp_record.employee_id);
+exit when employeeCursor%NOTFOUND;
+end loop;
+end;
+
+-----HANDLING EXCEPTIONS
+DECLARE
+lname VARCHAR2(15);
+BEGIN
+SELECT last_name INTO lname FROM employees WHERE first_name='John';
+DBMS_OUTPUT.PUT_LINE ('John''s last name is : '
+||lname);
+EXCEPTION
+WHEN TOO_MANY_ROWS THEN
+DBMS_OUTPUT.PUT_LINE (' Your select statement retrieved multiple rows. Consider using a cursor.');
+END;
