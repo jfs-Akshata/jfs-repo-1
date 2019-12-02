@@ -13,7 +13,8 @@ developed by Pivotal>
 <spring features
 interface driven development
 pojo based
-loose coupling>
+loose coupling
+unobtrusive>
 
 <modules in spring
 core = Dependency Injection and Inversion of Control
