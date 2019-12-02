@@ -14,6 +14,9 @@
 <!-- 		public void setProductRepository(ProductRepository productRepository) {
 		this.productRepository = productRepository;
 	} -->
-	<property name="productRepository" ref="productRepository"></property>
+	<!-- Setter Injection -->
+	<!-- <property name="productRepository" ref="productRepository"></property> -->
+	<!-- Constructor Injection -->
+
 	</bean>
 </beans>

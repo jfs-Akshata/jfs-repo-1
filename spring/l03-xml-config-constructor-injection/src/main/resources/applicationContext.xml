@@ -11,10 +11,13 @@
 	<!-- ProductService productService = new ProductServiceImpl(); -->
 	<bean name="productService"
 	class="com.domain.service.ProductServiceImpl">
+	<!-- Constructor based injection -->
+		<constructor-arg index="0" ref="productRepository"></constructor-arg>
+		
 <!-- 		public void setProductRepository(ProductRepository productRepository) {
 		this.productRepository = productRepository;
 	} -->
 	<!-- Setter Injection -->
-	<property name="productRepository" ref="productRepository"></property>
+	<!-- <property name="productRepository" ref="productRepository"></property> -->
 	</bean>
 </beans>

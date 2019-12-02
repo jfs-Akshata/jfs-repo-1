@@ -11,6 +11,8 @@ public class ProductServiceImpl implements ProductService {
   //private ProductRepository productRepository = new MongoDBRepository(); 
 	
 	private ProductRepository productRepository = null;
+
+	//Setter Based Injection
 	public void setProductRepository(ProductRepository productRepository) {
 		System.out.println("Setter Injection : ProductServiceImpl");
 		this.productRepository = productRepository;
