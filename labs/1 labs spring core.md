@@ -9,8 +9,8 @@
 
 ## NOTE : Project shoulD be named as <project-*****> as given below and pushed onto your github repository named <labs>
 
-## TASK 1 : IMPLEMENT XML CONFIGURATION, "ezshop-xml-config"
-## TASK 2 : IMPLEMENT ANNOTATION CONFIGURATION "ezshop-annotation-config"
-## TASK 3 : IMPLEMENT JAVA CONFIGURATION "ezshop-java-config"
+## TASK 1 : IMPLEMENT XML CONFIGURATION, "project name : ezshop-xml-config"
+## TASK 2 : IMPLEMENT ANNOTATION CONFIGURATION "project name :  ezshop-annotation-config"
+## TASK 3 : IMPLEMENT JAVA CONFIGURATION "project name :  ezshop-java-config"
 
 
