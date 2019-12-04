@@ -11,6 +11,6 @@
 
 ## TASK 1 : IMPLEMENT XML CONFIGURATION, "project name : ezshop-xml-config"
 ## TASK 2 : IMPLEMENT ANNOTATION CONFIGURATION "project name :  ezshop-annotation-config"
-## TASK 3 : IMPLEMENT JAVA CONFIGURATION "project name :  ezshop-java-config"
+## TASK 3 : IMPLEMENT JAVA CONFIGURATION "project name : "project name : ezshop-java-config"
 
 
