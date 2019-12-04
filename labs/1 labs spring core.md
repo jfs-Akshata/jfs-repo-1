@@ -1,4 +1,4 @@
-# MODULE : SPRING CORE
+# MODULE : SPRING CORE & SPRING WEB
 <PROJECT : EZSHOP, (NOTE: It would be your own project in this case)>
 
 ### SCENARIO : 
