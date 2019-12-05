@@ -132,7 +132,7 @@ class CustomORM {
 2. adding hibernate jar files to the lib folder
 3. set the classpath for the hibernate jars
 4. configure hibernate based on jpa : /1a-crud-hibernate-oracle-mysql/src/META-INF/persistence.xml
-<?xml version="1.0" encoding="UTF-8"?>
+`<?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
@@ -150,4 +150,130 @@ class CustomORM {
 				value="com.mysql.jdbc.Driver" />
 		</properties>
 	</persistence-unit>
-</persistence>
+</persistence>`
+5. create the entity
+com.demo.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="students")
+public class Student  {
+	@Id
+	private int studentId;
+	private String name;
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+
+6. create the dao
+6.1 Create a utility class JPAUtil to get the EntityManagerFactory
+// Use the Persistence and get the entity manager
+// Use the EntityManagerFactory to get the EntityManager 
+package com.demo.entity;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class JPAUtil {
+	public static EntityManager getEntityManager() {
+		EntityManagerFactory entityManagerFactory = Persistence
+				.createEntityManagerFactory("JPA-PU");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		return entityManager;
+
+	}
+}
+
+6.2 Implement StudentDao 
+package com.demo.dao;
+
+import com.demo.entity.Student;
+
+public interface StudentDao {
+
+	public abstract Student getStudentById(int id);
+
+	public abstract void addStudent(Student student);
+
+	public abstract void removeStudent(Student student);
+
+	public abstract void updateStudent(Student student);
+
+	public abstract void commitTransaction();
+
+	public abstract void beginTransaction();
+
+}
+
+6.3 Implement StudentDAOImpl
+package com.demo.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
+import com.demo.entity.Student;
+
+public class StudentDAOImpl implements StudentDao{
+private EntityManager entityManager = null;
+
+	public StudentDAOImpl(EntityManager entityManager) {
+	entityManager = JPAUtil.getEntityManager();
+}
+
+	@Override
+	public Student getStudentById(int id) {
+		return entityManager.find(Student.class, 100);
+	}
+
+	@Override
+	public void addStudent(Student student) {
+		entityManager.persist(student);
+		System.out.println("Student persisted in the database");
+	}
+
+	@Override
+	public void removeStudent(Student student) {
+		entityManager.remove(student);
+	}
+
+	@Override
+	public void updateStudent(Student student) {
+		entityManager.merge(student);
+	}
+
+	@Override
+	public void commitTransaction() {
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		entityTransaction.commit();
+	}
+
+	@Override
+	public void beginTransaction() {
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		entityManager.getTransaction().begin();
+	}
+
+}
+
+# Refer the demo for more code. l01-crud-hibernate-oracle-mysql 
+
+CREATE TABLE `jfsdb`.`students` (
+  `studentId` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`studentId`));
