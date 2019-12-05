@@ -129,4 +129,25 @@ class CustomORM {
 }
 # Demo 2 : Perform CRUD Operations Using Hibernate
 1. create a java application l01-crud-hibernate-oracle-mysql
-2. 
+2. adding hibernate jar files to the lib folder
+3. set the classpath for the hibernate jars
+4. configure hibernate based on jpa : /1a-crud-hibernate-oracle-mysql/src/META-INF/persistence.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="JPA-PU">
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/jfsdb?useSSL=false" />
+			<property name="javax.persistence.jdbc.user"
+				value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="mysql" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+		</properties>
+	</persistence-unit>
+</persistence>
