@@ -12,4 +12,5 @@
 ##### EXERCISE 1 : IMPLEMENT XML CONFIGURATION, "project name : ezshop-xml-config"
 ##### EXERCISE 2 : IMPLEMENT ANNOTATION CONFIGURATION "project name :  ezshop-annotation-config"
 ##### EXERCISE 3 : IMPLEMENT JAVA CONFIGURATION "project name : "project name : ezshop-java-config"
-##### EXERCISE 4 : CONNECT REPO TO ORACLE DB. "ezshop-repository-db-connect"
+##### EXERCISE 4 : CONNECT REPO TO ORACLE DB USING JDBC. "ezshop-repository-db-connect"
+##### EXERCISE 5 : IMPLEMENT CRUD OPERATION USING HIBERNATE "ezshop-hibernate-crud-mysql"
