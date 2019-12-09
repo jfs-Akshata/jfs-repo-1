@@ -22,7 +22,3 @@ function gp() {
     git commit -a -m "."
     git push
 }
-
-# configure git user
-git config --global user.name "jfs-1007"
-git config --global user.email "crafted.coded.2003@gmail.com"
