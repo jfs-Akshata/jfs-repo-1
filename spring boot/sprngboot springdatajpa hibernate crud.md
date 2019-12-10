@@ -1,6 +1,6 @@
 # CREATE A CRUD APPLICATION WITH SPRING BOOT, SPRING DATA JPA, HIBERNATE
 ## CREATING THE SPRING BOOT PROJECT
-1. create your project
+**1. create your project**
 - Name : l01-springboot-springdatajpa-hibernate-oracle-crud
 - Type : Maven
 - Java Version : Java 8
@@ -11,7 +11,7 @@
 - Dependencies
   - Spring Web
   - Spring Data JPA
-2. Explore the pom
+**2. Explore the pom**
 ``` xml
    <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
