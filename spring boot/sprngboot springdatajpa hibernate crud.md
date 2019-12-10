@@ -11,6 +11,7 @@
 - Dependencies
   - Spring Web
   - Spring Data JPA
+  
 **2. Explore the pom**
 ``` xml
    <?xml version="1.0" encoding="UTF-8"?>
